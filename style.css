@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f7689d; /* Warna background pink utama */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Luar dengan Pola Kotak Retro */
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  background-color: #f7689d;
+  /* Membuat background grid / checkered di bagian bawah/atas */
+  background-image: 
+    linear-gradient(#ffffff 2px, transparent 2px),
+    linear-gradient(90deg, #ffffff 2px, transparent 2px);
+  background-size: 30px 30px;
+  padding: 40px 20px;
+}
+
+/* Judul Utama */
+.main-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: -1px;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* Kartu Utama Neo-Brutalism */
+.card-container {
+  background-color: #f8f6e9; /* Warna krem kartu */
+  border: 3px solid #000000;
+  border-radius: 24px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 8px 8px 0px #000000; /* Bayangan tebal keras */
+  z-index: 1;
+}
+
+/* Titik Tiga Warna (Merah, Kuning, Hijau) */
+.card-dots {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+/* Tata Letak Konten (Flexbox) */
+.card-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Kolom Foto */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-wrapper {
+  width: 220px;
+  height: 220px;
+  border: 3px solid #000;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 6px 6px 0px #000;
+  background-color: #000;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%); /* Efek foto hitam-putih */
+}
+
+/* Bintang Rating */
+.stars {
+  margin-top: 15px;
+  color: #ff65a3;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+}
+
+/* Kolom Detail Informasi */
+.info-section {
+  flex: 1;
+}
+
+.name-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #e60067;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.quote {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* Section Skills */
+.skills-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skills-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Item Skill Bar & Pill Tag */
+.skill-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.skill-tag {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 3px 3px 0px #000;
+  z-index: 2;
+  min-width: 120px;
+  text-align: center;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 32px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  margin-left: -15px; /* Overlap dengan tag */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* Skema Warna Skill Bars */
+.tag-pink { background-color: #f75c96; }
+.bar-pink { background-color: #fde2ed; }
+
+.tag-orange { background-color: #f37000; }
+.bar-orange { background-color: #fdebd9; }
+
+.tag-green { background-color: #27ae60; }
+.bar-green { background-color: #dcf2e3; }
+
+.tag-grey { background-color: #6c757d; }
+.bar-grey { background-color: #e9ecef; }
