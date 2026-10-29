@@ -1,0 +1,51 @@
+<?php
+
+public function up(): void
+{
+    Schema : : create('users', function (Blueprint $table) {
+        $table->id();
+        $table->string('name');
+        $table->string('nim')->unique();
+        $table->string('email');
+        $table->string('prodi');
+        $table->string('email');
+        $table->string('password');
+
+        protected $fillable = [
+            'nama',
+            'nim',
+            'prodi',
+            'email',
+            'password',
+        ];
+
+        protected $fillable = [
+            'nama'
+            'nim'
+            'prodi'
+            'email'
+            'password'
+
+        ];
+
+public function index()
+{
+    $mahasiswa = User::first();
+    $hours = date('H')
+    $salam = match (true) {
+        $hours >= 5 && $hours < 12 => "Good Morning",
+        $hours >= 12 && $hours < 5 => "Good Afternoon",
+        $hours >= 5 && $hours < 18 => "Good Evening",
+        default => "Good Night",
+};
+
+$accesstime = date ("H:i:s");
+return view('dashboard', compact('mahasiswa', 'salam', 'accesstime'));
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+     <title>@yield('title')</title>
+     <link href="http://127.0.0.1:5500/html"
